@@ -88,6 +88,10 @@ endif
 # needed for relocation
 LDFLAGS_u-boot += -pie
 
+# needed for binutils version 2.34 or higher
+# refrence: https://stackoverflow.com/questions/63420037/error-phdr-segment-not-covered-by-load-segment
+LDFLAGS_u-boot += --no-dynamic-linker
+
 #
 # FIXME: binutils versions < 2.22 have a bug in the assembler where
 # branches to weak symbols can be incorrectly optimized in thumb mode
