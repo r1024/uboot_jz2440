@@ -139,7 +139,7 @@ void nand_init(void)
 	int i;
 
 	for (i = 0; i < CONFIG_SYS_MAX_NAND_DEVICE; i++)
-		nand_init_chip(i);
+		/* nand_init_chip(i); */
 #endif
 
 	printf("%lu MiB\n", total_nand_size / 1024);

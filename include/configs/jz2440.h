@@ -1,11 +1,8 @@
 /*
- * (C) Copyright 2002
- * Sysgo Real-Time Solutions, GmbH <www.elinos.com>
- * Marius Groeger <mgroeger@sysgo.de>
- * Gary Jennejohn <garyj@denx.de>
- * David Mueller <d.mueller@elsoft.ch>
+ * (C) Copyright 2022
+ * Wen Chen <wenchen.mails@gmail.com>
  *
- * Configuation settings for the SAMSUNG SMDK2410 board.
+ * Configuation settings for the JZ2440 board.
  *
  * SPDX-License-Identifier:	GPL-2.0+
  */
@@ -18,14 +15,14 @@
  * (easy to change)
  */
 #define CONFIG_S3C24X0		/* This is a SAMSUNG S3C24x0-type SoC */
-#define CONFIG_S3C2410		/* specifically a SAMSUNG S3C2410 SoC */
-#define CONFIG_SMDK2410		/* on a SAMSUNG SMDK2410 Board */
+#define CONFIG_S3C2440		/* specifically a SAMSUNG S3C2440 SoC */
+#define CONFIG_JZ2440		/* on a JZ2440 Board */
 
 #define CONFIG_SYS_TEXT_BASE	0x0
 
 #define CONFIG_SYS_ARM_CACHE_WRITETHROUGH
 
-/* input clock of PLL (the SMDK2410 has 12MHz input clock) */
+/* input clock of PLL (the JZ2440 has 12MHz input clock) */
 #define CONFIG_SYS_CLK_FREQ	12000000
 
 #define CONFIG_CMDLINE_TAG	/* enable passing of ATAGs */
@@ -43,7 +40,7 @@
  * select serial console configuration
  */
 #define CONFIG_S3C24X0_SERIAL
-#define CONFIG_SERIAL1		1	/* we use SERIAL 1 on SMDK2410 */
+#define CONFIG_SERIAL1		1	/* we use SERIAL 1 on SMDK2440 */
 
 /************************************************************
  * USB support (currently only works with D-cache off)
@@ -154,8 +151,8 @@
  * NAND configuration
  */
 #ifdef CONFIG_CMD_NAND
-#define CONFIG_NAND_S3C2410
-#define CONFIG_SYS_S3C2410_NAND_HWECC
+#define CONFIG_NAND_S3C2440
+#define CONFIG_SYS_S3C2440_NAND_HWECC
 #define CONFIG_SYS_MAX_NAND_DEVICE	1
 #define CONFIG_SYS_NAND_BASE		0x4E000000
 #endif
